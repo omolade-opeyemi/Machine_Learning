@@ -1,8 +1,6 @@
 absl-py==0.14.0
 asgiref==3.4.1
 astunparse==1.6.3
-beautifulsoup4==4.10.0
-bs4==0.0.1
 cachetools==4.2.4
 certifi==2021.5.30
 charset-normalizer==2.0.6
