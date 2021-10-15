@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{%load static %}
+
+{% block content%}
+    <div class="container" >
+        <h1>This is homepage</h1>
+        <form action="{% url 'predict' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input name='document' type="file">
+            <br><br>
+            <input type="submit">
+
+            
+        </form>
+
+        <img src="{{filePath}}" alt="" style="width: 50%;">
+        {{filePath}}
+        <br>
+        <h1>{{predictLabel}}</h1>  
+    </div>
+{% endblock %}
