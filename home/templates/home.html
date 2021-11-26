@@ -3,7 +3,7 @@
 
 {% block content%}
     <div class="container" >
-        <h1>This is homepage</h1>
+        <h1>This is homepage</h1><br>
         <form action="{% url 'predict' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input name='document' type="file">
@@ -13,7 +13,7 @@
             
         </form>
 
-        <img src="{{filePath}}" alt="" style="width: 50%;">
+        <img src="{{filePath}}" alt="" style="width: 50%;"><br>
         {{filePath}}
         <br>
         <h1>{{predictLabel}}</h1>  
