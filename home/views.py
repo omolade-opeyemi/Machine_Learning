@@ -42,10 +42,11 @@ def predictPage(request):
  
 def viewPage(request):
     ListOfImages=os.listdir('./media/')
-    print(ListOfImages)
+    print('IMAGESSSSSSSS' , ListOfImages)
     ListOfImagesPath=['./media/'+i for i in ListOfImages]
     zipped = zip(ListOfImages, ListOfImagesPath)
-    context={'zipped':zipped}
+    N ='No image to display'
+    context={'zipped':zipped, 'N':N, 'LOI':ListOfImages}
     return render(request, 'viewDB.html',context)
 
 def blogPage(request):

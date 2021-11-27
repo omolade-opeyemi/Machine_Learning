@@ -2,12 +2,17 @@
 {%load static%}
 {%block content%}
 
-    {% for i,j in zipped %}
-        <h3>{{i}}</h3>
-        
-        <img src="{{j}}" style="width: 50%;">
-        <br><br>
-    {%endfor%}
+
+        {% if LOI|length < 1 %}
+        <br>
+            <h2>No image to display </h2>
+        {% else %}
     
+            {% for i,j in zipped %}
+                <h3>{{i}}</h3>
+                <img src="{{j}}" style="width: 50%;">
+                <br><br>
+            {%endfor%}
+        {%endif%}
 
 {%endblock%}
