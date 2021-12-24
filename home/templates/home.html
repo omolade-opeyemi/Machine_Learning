@@ -4,7 +4,8 @@
 {% block content%}
     <div class="container" >
         <br>
-        <h1>This is homepage</h1><br>
+        <h1 style="text-align: center;">This is homepage</h1><br>
+        <h1 style="text-align: center;">Upload an image to detect if it's a vehicle or not.</h1>
         <form action="{% url 'predict' %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <input name='document' type="file">
